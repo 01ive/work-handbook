@@ -1,391 +1,73 @@
-# 📋 Méthode de Gestion des Actions - Olive
+# 📋 Gestion des actions
 
- 
-
-Ce document décrit la méthodologie personnelle d'Olive pour organiser, prioriser et suivre ses actions professionnelles et personnelles.
-
- 
+Cette méthode permet de capturer, prioriser et suivre les actions professionnelles et personnelles. Elle complète la [gestion des mails](./mails.md) : toute action qui ne peut pas être traitée immédiatement est transférée dans la liste des actions, afin de libérer la boîte de réception.
 
 ---
 
- 
+## 🎯 Méthode
 
-## 🎯 **Philosophie Globale**
+L'organisation s'appuie sur une liste d'actions structurée, inspirée de la méthode Kanban. Chaque action est décrite en identifiant, si possible, les éléments suivants :
+* ✏️ sa description par une phrase synthétique
+* *@* la personne chargée de l'action
+* 📅 la date d'échéance de l'action
+* *#* une catégorie libre
+* ⏱️ la charge de travail estimée
+* ⏳ la charge de travail réalisée
+* ✅ son état : ouvert, en cours, bloqué ou clos
+* 🔴 sa priorité
 
- 
+Lors de la création d'une action, il est possible de ne pas disposer de toutes ces informations. Nous pouvons les compléter au fur et à mesure, au moment où l'on traite l'action.
 
-La gestion des actions chez Olive repose sur :
+### 📥 Capturer les actions
 
-- **Une approche structurée** mais flexible
+Les actions peuvent provenir de différentes sources :
+* Réunions : comptes rendus, décisions et suivis.
+* Mails : demandes et suivis qui nécessitent plus de 2 minutes (voir [traitement des mails](./mails.md)).
+* Idées spontanées : elles peuvent être identifiées à l'aide de l'émoji `💡`.
+* Demandes diverses et variées.
 
-- **Un équilibre entre rigueur et adaptabilité**
+### Classer les actions
 
-- **La transparence** via un suivi visuel et collaboratif
+Je classe les actions selon cinq catégories :
 
-- **L'amélioration continue** par rétrospection régulière
+* 📦 **Backlog** : pour noter toutes les actions et idées. Elles ne comportent bien souvent qu'une description et une date lointaine.
+* 📝 **Todo** : pour regrouper au maximum une dizaine d'actions à traiter dans les semaines à venir (à échéance proche). Lors du passage du backlog à Todo, j'en profite souvent pour affiner la date de réalisation et ajouter une charge ainsi qu'une priorité.
+* 🎯 **Today** : regroupe les tâches que je dois réaliser aujourd'hui. Je note le temps passé en fin de journée et les clos si besoin.
+* ⏳ **Standby** : pour les tâches bloquées, qui nécessitent que j'y revienne plus tard, lorsque j'aurai les informations attendues.
+* ✅ **Done** : pour les tâches achevées.
 
- 
+### ✅ Clore les actions
 
----
+Il est important de clore les actions une fois celles-ci réalisées et d'en garder une trace. Cela procure un sentiment de satisfaction indispensable au moment de la clôture et vous fait prendre conscience que vous avancez dans vos activités lorsque vous observez l'ensemble du travail effectué.
 
- 
+### 🧘‍♂️ Préparer votre journée la veille
 
-## 📊 **Structure du Système**
-
- 
-
-### 1. **Hiérarchie des Priorités**
-
- 
-
-Olive utilise un système de **priorités visuelles et textuelles** pour classer ses tâches :
-
- 
-
-| Symbole | Niveau de Priorité | Description |
-
-|---------|-------------------|-------------|
-
-| `!!!` | **Urgent/Critique** | Actions à traiter **immédiatement** (ex: recrutement, deadlines immédiates) |
-
-| `!!` | **Haute Priorité** | Actions importantes avec échéance proche (ex: formations, réunions clés) |
-
-| `!` | **Priorité Moyenne** | Actions importantes mais moins urgentes (ex: études, veille) |
-
-| `~` | **Priorité Faible** | Actions utiles mais non critiques (ex: idées, explorations) |
-
-| *Aucun symbole* | **Standard** | Actions normales du quotidien |
-
- 
+À la fin de votre journée de travail, il est important de compléter votre liste d'actions avec toutes les nouvelles actions de la journée et de planifier celles que vous traiterez le lendemain. Cela vous libérera l'esprit et vous évitera toute angoisse d'oublier des actions pendant la nuit.
 
 ---
 
- 
+## 🛠️ Outils
 
-### 2. **Catégorisation par Tags**
+Comme décrit dans la méthode de [gestion des mails](./mails.md), les tâches prenant plus de 2 minutes peuvent être marquées, classées et regroupées dans une vue d'Outlook. La gestion des tâches sous Outlook ne me convient pas et j'ai essayé des outils alternatifs comme le très bon [Task Coach](https://taskcoach.org/), mais j'ai développé ma propre solution afin de répondre parfaitement à mes besoins.
 
- 
+En tant que développeur, j'ai toujours **VS Code** ouvert. J'ai donc développé une solution [My todo](https://github.com/01ive/my-todo-md) s'appuyant sur cet IDE, qui me permet :
+* d'utiliser du texte brut au format **Markdown**, afin que les données restent exploitables avec un simple éditeur ;
+* de gérer la configuration sous **Git** ;
+* de connecter un **agent IA** comme Copilot avec [My todo MCP](https://github.com/01ive/my-todo-mcp-server) ;
+* de proposer une vue **Kanban** simple et interactive ;
+* de visualiser les tâches dans un planning de type **Gantt** ;
+* d'ajouter et de modifier **rapidement** les tâches ;
+* de mettre en avant certaines **catégories** d'actions.
 
-Chaque tâche est associée à des **tags thématiques** pour faciliter le filtrage :
+### My todo
 
- 
+Extension VS Code permettant d'afficher le markdown en **Kanban** et **Gantt**.
 
-| Tag | Domaine | Exemples d'Actions |
+https://github.com/01ive/my-todo-md
 
-|-----|---------|-------------------|
 
-| `#UHF` | Unité de Travail UHF | Tests, maintenance, développement |
+### My todo MCP server pour agent IA
 
-| `#metier` | Activités Métier | Études, veille, projets transverses |
+Serveur MCP permettant à un **agent IA** d'interagir avec une liste de tâches au format My todo.
 
-| `#IA` | Intelligence Artificielle | Expérimentations, veille IA |
-
-| `#💡` | Idées/Innovation | Propositions non formalisées |
-
-| `#FORMATION` | Formation | Sessions de formation, certifications |
-
-| `#TEAM` | Gestion d'Équipe | Recrutement, évaluations, onboarding |
-
-| `#GAN`, `#COBRA`, `#SG` | Projets Spécifiques | Tâches liées à des projets nommés |
-
- 
-
----
-
- 
-
-### 3. **Organisation en Listes Kanban**
-
- 
-
-Le système utilise une structure **Kanban-like** avec des colonnes thématiques :
-
- 
-
-| Liste | Statut | Description |
-
-|-------|--------|-------------|
-
-| **📦 Backlog** | Non commencé | Idées, projets futurs ou tâches en attente de ressources |
-
-| **🗂️ Todo** | À faire | Tâches planifiées pour les prochains jours/semaines |
-
-| **🎯 Today** | Aujourd'hui | Actions prioritaires du jour |
-
-| **⏸️ Standby** | En pause | Tâches interrompues ou en attente d'informations |
-
-| **✅ Done** | Terminées | Historique des actions complétées (archivage pour traçabilité) |
-
- 
-
----
-
- 
-
-## ⚙️ **Processus de Gestion**
-
- 
-
-### **1. Capture des Actions**
-
-- **Sources multiples** :
-
-  - Réunions (CR, décisions)
-
-  - Emails (demandes, follow-ups)
-
-  - Idées spontanées (marquées `#💡`)
-
-  - Retours d'expérience (RETEX)
-
-- **Format standardisé** :
-
-  ```markdown
-
-  - [ ] Tâche @responsable #tag ~durée date-échéance
-
-  ```
-
-  Exemple :
-
-  ```markdown
-
-  - [ ] Faire kick off BMN AURORE 2026-11-02 #UHF ~1h
-
-  ```
-
- 
-
-### **2. Priorisation**
-
-- **Matrice Urgence/Importance** :
-
-  - **Urgent + Important** → `!!!` (ex: recrutement)
-
-  - **Important mais non urgent** → `#metier` (ex: études)
-
-  - **Urgence faible** → `~` (ex: veille)
-
-- **Règles de priorisation** :
-
-  - Deadlines fixes → priorité absolue
-
-  - Projets collaboratifs → coordination avec les parties prenantes
-
-  - Idées innovantes → évaluées séparément (liste `#💡`)
-
- 
-
-### **3. Planification**
-
-- **Horizon temporel** :
-
-  - **Court terme** : Liste `Today` (actions du jour)
-
-  - **Moyen terme** : Liste `Todo` (1-2 semaines)
-
-  - **Long terme** : Liste `Backlog` (projets futurs)
-
-- **Durées estimées** :
-
-  - Toujours indiquées (`~30m`, `~2h`, `~1d`)
-
-  - Ajustées en fonction de la charge réelle
-
- 
-
-### **4. Exécution**
-
-- **Suivi visuel** :
-
-  - Mise à jour quotidienne des statuts (`[ ]` → `[/]` → `[x]`)
-
-  - Couleurs pour les priorités (`!!!` en rouge, `!` en orange)
-
-- **Flexibilité** :
-
-  - Réaffectation possible entre listes (ex: `Todo` → `Standby` si blocage)
-
-  - Réévaluation hebdomadaire des priorités
-
- 
-
-### **5. Rétrospection**
-
-- **Revue hebdomadaire** :
-
-  - Transfert des tâches `Todo` vers `Done` ou `Backlog`
-
-  - Analyse des blocages (liste `Standby`)
-
-  - Mise à jour des deadlines
-
-- **Bilan mensuel** :
-
-  - Évaluation des objectifs atteints
-
-  - Ajustement des méthodes si nécessaire
-
- 
-
----
-
- 
-
-## 🔄 **Flux de Travail Type**
-
- 
-
-```mermaid
-
-graph TD
-
-    A[Capture] --> B{Priorisation}
-
-    B -->|Urgent| C[Today]
-
-    B -->|Important| D[Todo]
-
-    B -->|Idée| E[Backlog/#💡]
-
-    C --> F[Exécution]
-
-    D --> F
-
-    E -->|Mûri| D
-
-    F --> G[Statut: [/] ou [x]]
-
-    G --> H[Rétrospection]
-
-    H --> B
-
-```
-
- 
-
----
-
- 
-
-## 📌 **Bonnes Pratiques**
-
- 
-
-1. **Clarté** :
-
-   - Toujours indiquer `@responsable`, `#tag`, et `~durée`
-
-   - Utiliser des libellés précis (éviter les tâches trop génériques)
-
- 
-
-2. **Collaboration** :
-
-   - Assigner les tâches avec `@` pour clarifier les responsabilités
-
-   - Utiliser les tags pour partager avec les équipes (ex: `#UHF` pour l'unité)
-
- 
-
-3. **Flexibilité** :
-
-   - Accepter de déplacer les tâches entre listes si nécessaire
-
-   - Ne pas hésiter à marquer une tâche en `Standby` si bloquée
-
- 
-
-4. **Transparence** :
-
-   - Archiver systématiquement les tâches `Done` pour traçabilité
-
-   - Utiliser les deadlines pour anticiper les surcharges
-
- 
-
-5. **Amélioration Continue** :
-
-   - Noter les idées `#💡` pour innovation future
-
-   - Réévaluer régulièrement les priorités en fonction du contexte
-
- 
-
----
-
- 
-
-## 🛠️ **Outils Complémentaires**
-
- 
-
-- **Calendrier Outlook** : Pour les réunions et deadlines critiques
-
-- **Fichiers de suivi** : Documents dédiés pour les projets complexes (ex: roadmaps)
-
-- **Collaboration** : Partage des tags avec les équipes (ex: `#metier` pour les activités transverses)
-
- 
-
----
-
-## 📝 **Exemple Concret**
-
- 
-
-### **Scénario : Préparation d'une Formation**
-
-1. **Capture** :
-
-   - Email reçu : "Formation Software DevOps à organiser le 2026-10-23"
-
-2. **Priorisation** :
-
-   - Urgent (date fixe) + Important (formation) → `!!!`
-
-   - Tag `#FORMATION` + `@me` (responsable)
-
-3. **Planification** :
-
-   - Ajout à la liste `Todo` avec échéance
-
-   - Estimation : `~8h` (préparation + logistique)
-
-4. **Exécution** :
-
-   - Réservation de la salle, préparation du support
-
-   - Suivi avec `[/]` pendant la préparation
-
-5. **Clôture** :
-
-   - Passage à `[x]` après la formation
-
-   - Archivage dans `Done` avec détails (ex: "#FORMATION @me ~8h 2026-10-23")
-
- 
-
----
-
-## 📚 **Ressources Associées**
-
- 
-
-- [TODO.md](TODO.md) : Liste principale des actions
-
-- [Roadmaps](ex: "roadmap AT sur DP") : Pour les projets à long terme
-
-- [CR Réunions](ex: "CR PALMA SSA") : Pour les décisions formalisées
-
-- [Emails](ex: "Réponse PROFIDIS @wilfrid") : Suivi des échanges
-
- 
-
----
-
-**Dernière mise à jour** : 2026-10-23
-
-**Auteur** : Olive
-
-**Méthode inspirée de** : Approches Agile + Gestion de Projet Personnelle (GTD-like)
+https://github.com/01ive/my-todo-mcp-server

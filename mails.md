@@ -1,133 +1,122 @@
-# Gestion des mails
+# 📥 Gestion des mails
 
-Présentation d'une méthode de gestion des mails, facile et rapide, permettant de garder une Inbox vide.
+Présentation d'une méthode de gestion des mails, facile et rapide, permettant de garder une boîte de réception (*Inbox*) vide.
 
-Le présent document présente dans un premier temps la méthodologie à mettre en place, puis dans un second temps, les outils supportant le déploiement de cette méthodologie.
+Le présent document détaille dans un premier temps la méthodologie à mettre en place, puis dans un second temps, les outils supportant son déploiement.
 
-------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-## Méthode
+## 🎯 Méthode
 
-Les principaux éléments de la méthode présentés ci-dessous sont issus de la méthode GTD décrite dans le best seller "Getting Thing Done" de David Allen publié en 2003. L'objectif principal de cette méthode est d'avoir une Inbox vide le plus facilement possible. En effet une Inbox plaine peut donner le sentiment d'avoir une "montagne" de travail, générer du stress et/ou de la démotivation. Tout message lu (traité ou non), doit donc se voir retiré de l'Inbox immédiatement.
+Les principaux éléments présentés ci-dessous sont issus de la méthode GTD, décrite dans le best-seller *« Getting Things Done »* de David Allen (publié en 2001, traduit en 2004). L'objectif principal est d'obtenir une boîte vide (*Inbox Zero*) avec un minimum d'effort. En effet, une boîte pleine peut donner le sentiment d'affronter une « montagne » de travail, générant stress et démotivation. Tout message lu (qu'il soit traité ou non) doit donc être immédiatement retiré de l'Inbox.
 
-### Les types de mails
+### 🗂️ Les types de mails
 
-Les mails que nous recevons peuvent être classés en 2 catégories:
+Les mails reçus se répartissent en 2 grandes catégories :
+* Les mails d'**information**, que l'on peut qualifier de « jetables » ou « à conserver » sur le long terme.
+* Les mails d'**action**, qui se séparent en 2 cas : les actions rapides (moins de 2 minutes) et les actions longues.
 
-* Les mails d'**information**, qui peuvent être classifiés de "jetable" ou "à conserver" sur du long terme.
-* Les mails d'**actions**, qui peuvent se classer en 2 catégories; les actions de moins de 2 minutes et les actions longues.
+On obtient ainsi quatre grands types de mails :
+* 🗑️ Mail d'**information jetable**
+* 📁 Mail d'**information à conserver**
+* ⚡ Mail d'**action rapide (< 2 min)**
+* ⏳ Mail d'**action longue (> 2 min)**
 
-Cela permet donc de catégoriser les mails en quatre types:
+Il est indispensable de limiter le nombre de catégories afin de contenir l'effort cognitif et le temps consacré au tri.
 
-* Mail d'**information jetable**.
-* Mail d'**information à conserver**.
-* Mail d'**action prenant moins de 2 minutes**.
-* Mail d'**action prenant plus de 2 minutes**.
+> ⏱️ **La règle des 2 minutes (principe GTD)**  
+> Tout mail dont le traitement (lecture/décision ou action) prend moins de 2 minutes doit être traité **immédiatement**. Un mail demandant plus de 2 minutes est traité en dehors du temps de tri (il est donc mis de côté pour un traitement ultérieur en [todo](./todo.md)).
 
-Il est indispensable de limiter les catégories afin de contenir l'effort et le temps nécessaire à la classification.
+### 🚦 Priorité des mails
 
-**La règle des 2 minutes (cf GTD)**
-Un mail prenant moins de 2 minutes pour être traité, doit être traité immédiatement. Que ce soit pour une prise d'information ou pour une action. Un mail prenant plus de 2 minutes, doit être traité en dehors du temps de lecture des mails (donc mis de côté pour traitement ultérieur).
+Avant même d'ouvrir un message, il est possible d'évaluer son niveau de priorité à partir de son expéditeur et de ses destinataires.  
+Pour l'expéditeur, la hiérarchie est souvent directe : une annonce du club café sera naturellement moins prioritaire qu'un mail du chef de projet sur lequel vous intervenez.
 
-### Priorité des mails
+On peut donc définir, par exemple, les priorités suivantes selon l'**expéditeur** :
+* 🔴 Mails de mes responsables
+* 🟢 Mails de mon équipe
+* ⚪ Autres messages
 
-Sans même prendre connaissance du contenu des mails, on peut les classer par ordre de priorité en utilisant le nom de l'expéditeur ou les destinataires.
-Pour le nom de l'expéditeur il est facile de définir des priorités. Un groupe d'information du club café sera par exemple moins prioritaire qu'un mail provenant du chef de projet sur lequel j'interviens.
+Concernant les **destinataires**, un message où vous apparaissez en copie carbone (`Cc`) est généralement moins urgent qu'un message dont vous êtes le destinataire direct (`À`).
 
-Grace à l'expéditeur on peut donc définir par exemple les catégories suivantes:
+Exemple de niveaux de priorité selon les destinataires :
+* 🎯 Seul destinataire principal (`À`)
+* 👥 Destinataire principal parmi d'autres (`À`)
+* 📑 En copie (`Cc`)  
+  *(À noter : la copie cachée / `Cci` doit être traitée avec le même niveau d'attention qu'un destinataire principal).*
 
-* Mail de mes responsables
-* Mail de mon équipe
-* Les autres
+### 🔕 Gérer les interruptions
 
-Pour la catégorie de destinataire à laquelle j'appartiens, il est évident qu'un mail où je suis en cc devrait être moins prioritaire qu'un mail où je suis en destinataire principal.
+Pour préserver la concentration, la productivité et limiter le stress, il est fortement conseillé de ne pas subir les interruptions constantes des notifications de sa boite mail.
 
-On peut donc définir par exemple les catégories suivantes à partir des destinataires:
+* Désactiver l'ensemble des alertes visuelles (bannières, pop-ups) et sonores du client mail.
+* Définir des plages horaires dédiées au traitement des messages (par exemple 2 sessions par jour : en début de matinée et en début d'après-midi).
+* Si possible, garder le client mail fermé en dehors de ces créneaux.
 
-* Mail où j'apparais comme le seul destinataire principal.
-* Mail où j'apparais en destinataire principale mais avec d'autre personnes.
-* Mail où j'apparais en copie (cc).
-*A noter que la Copie Carbonne Invisible (cci est à considérer comme destinataire principal).*
+---
 
-### Gérer les interruptions
+## 🛠️ Outils
 
-Afin d'améliorer notre concentration, notre productivité et de baisser notre niveau de stress, il est préférable de ne pas être régulièrement interrompu par des notifications de mails.
-Il est donc recommandé de désactiver les notifications visuelles et sonores de notre client mail.
+La configuration du client de messagerie permet d'accélérer le dépilage et le tri tout en offrant des repères visuels clairs (à la manière d'une carte heuristique).
 
-Pour aller plus loin, nous pouvons aussi consacrer des temps dédiées dans la journée au traitement de nos mails. Par exemple traiter nos mails 2 fois par jour, le matin et en début d'après-midi. Notre client mail pouvant être fermé le reste du temps.
+Les configurations décrites ci-dessous s'appuient sur **Microsoft Outlook**, mais restent transposables à d'autres outils (Thunderbird, Apple Mail, etc.).
 
-------------------------------------------------------------------------------------------------------------------------------------------
+### 🎨 Coloration des mails par importance (mise en forme conditionnelle)
 
-## Outils
+Le client peut modifier l'affichage des messages dans la liste selon l'expéditeur ou votre position dans les destinataires. Cela permet d'identifier la priorité d'un coup d'œil et, dans certains cas, d'archiver un message sans l'ouvrir.
 
-La configuration du client mail à pour but d'accélérer le dépilage et la lecture des mails, mais aussi de faciliter la classification de ceux-ci par des éléments cognitifs tout comme les cartes heuristiques (Mind Maps).
+Exemple de règles de mise en forme :
+* Conserver les règles d'affichage par défaut.
+* Mettre en évidence les personnes prioritaires : police **rouge** pour la hiérarchie, police **verte** pour l'équipe directe...
+* Atténuer les messages où vous êtes en copie (`Cc`) : police **grise** discrète sur fond blanc.
+* Distinguer les messages où vous êtes destinataire unique : police **soulignée** ou en gras.
 
-Les éléments de configuration décrit ci-dessous sont applicables à MS Outlook mais sont transposables à d'autres clients mails.
+### ⚡ Rangement rapide des mails (actions rapides & raccourcis)
 
-### Coloration des mails par importance (support à l'identification de la priorité des mails)
+Pour ranger les messages sans glisser-déposer manuel, il est utile de paramétrer des **Actions rapides** configurées pour déplacer directement le mail vers un sous-dossier, combinées à un raccourci clavier :
 
-Le client mail peut être configuré pour changer le format de présentation des mails en fonction de l'expéditeur et / ou de la catégorie de destinataire à laquelle j'appartiens. Cela a le bénéfice de nous permettre d'un coup d'oeil d'identifier la priorité d'un mail et dans certains cas de permettre son classement sans même le lire.
+1. `Ctrl + Maj + 1` ➔ Travail projet 1
+2. `Ctrl + Maj + 2` ➔ Travail projet 2
+3. `Ctrl + Maj + 3` ➔ Travail projet 3
+4. `Ctrl + Maj + 5` ➔ Métier
+5. `Ctrl + Maj + 8` ➔ Perso
+6. `Ctrl + Maj + 9` ➔ Admin
 
-Exemple de configuration:
+Le nombre restreint de raccourcis oblige à maintenir une arborescence courte et sobre. Cela évite les dossiers imbriqués à l'infini qui ralentissent le classement. Un moteur de recherche efficace associé à un bon étiquetage rend superflue la multiplication des répertoires.
 
-* Conserver les règles par défaut.
-* Définir une ou des règles identifiant les personnes prioritaires (police rouge pour mes responsables et vert pour mon équipe afin de faire ressortir ces mails dans l'inbox).
-* Définir une règle identifiant les messages où je suis en copie (police grise afin de rendre à peine visible ces mails sur le fond blanc de l'inbox).
-* Définir une règle identifiant les messages où je suis en destinataire unique (police soulignée).
+### 🏷️ Catégories de classement (recherche accélérée)
 
-### Rangement rapide des mails (accélération du temps de traitement des mails)
+L'attribution de catégories de couleurs aide à retrouver rapidement des éléments transverses ou récurrents :
 
-Afin de classer les mails rapidement, il peut être intéressant de définir des actions rapides afin de déplacer les mails dans un répertoire. La définition d'un raccourci clavier sur chaque action rapide permet de classer très rapidement les mails à partir de l'Inbox.
+* 🔴 **Rouge** : Important / Urgent
+* 🟡 **Jaune** : Configuration & accès informatiques
+* 🟣 **Violet** : Formation
+* 🟠 **Orange** : Personnel
 
-Exemple d'action rapides:
+### 📌 Traiter les actions longues (> 2 minutes)
 
-1. Travail projet 1 ( Ctrl + Maj + 1 )
-2. Travail projet 2 ( Ctrl + Maj + 2 )
-3. Travail projet 3 ( Ctrl + Maj + 3 )
-4. Métier ( Ctrl + Maj + 5 )
-5. Perso ( Ctrl + Maj + 8 )
-6. Admin ( Ctrl + Maj + 9 )
+Les tâches de plus de 2 minutes ne pouvant être exécutées sur-le-champ, elles doivent être tracées tout en libérant la boîte de réception.
 
-Les raccourcis des actions rapides étant limités en nombre, ils limitent le nombre de répertoires de classement. Cela évite une trop grande complexité de l'arborescence qui peut être chronophage lors du classement et peut engendrer des recherches difficiles. La maitrise des outils de recherche, associée aux options de classifications des mails permet la définition de répertoires de rangement "macroscopiques".
+1. **Poser un indicateur de suivi** (drapeau) via une action rapide dédiée.
+2. **Classer immédiatement** le mail dans son dossier de référence (l'Inbox reste ainsi vide).
+3. **Consulter la vue dédiée** : créer un *Dossier de recherche personnalisé* (ex. : *« Actions »* ou *« Courrier avec indicateur de suivi »*).
+4. Traiter ces actions lors d'un bloc de temps dédié (soit immédiatement après la session de tri, soit sur une plage réservée de l'agenda) avec méthode (voir [todo](./todo.md)).
+5. Une fois l'action achevée, marquer l'indicateur comme **terminé** : le mail disparaît de la vue *Actions* sans nécessiter de nouveau rangement puisqu'il est déjà dans son dossier thématique.
 
-### Classification des mails (accélération du temps de traitement des mails et aide à la recherche)
+---
 
-L'options de classification des mails permet d'identifier des mails en définissant des catégories. Cela permet d'accélérer la recherche de mails importants ou en lien avec certains sujets récurrents.
+## 📅 Gestion du calendrier
 
-Exemple de classification:
+Cette même approche visuelle peut s'appliquer aux rendez-vous de l'agenda. Outlook permet de colorer automatiquement les événements selon leur organisateur ou leur objet.
 
-* rouge, important
-* Jaune, configuration et accès informatiques
-* violet, formation
-* orange, personnel
+Exemple de répartition des couleurs :
+* 🔴 **Rouge** : Réunions importantes / hiérarchie
+* 🟢 **Vert** : Points d'équipe
+* 🟣 **Violet** : Formations
+* 🟠 **Orange** : Personnel / privé (marquer comme « Privé » pour masquer le détail)
+* 🔵 **Bleu** : Réunions que vous organisez
 
-### Traiter les actions longues (gestion des actions de plus de 2 minutes)
-
-Les actions longues ne pouvant être traitées immédiatement, il est nécessaire de pouvoir les tracer tout en vidant l'Inbox du client mail, l'utilisation des drapeaux d'actions (Assurer un suivi via action rapide) permet de les identifier facilement. Une fois le drapeau placé, nous pouvons donc les classer immédiatement dans le bon répertoire.
-
-Le traitement de ces actions longues doit être fait une fois l'Inbox vidée a un autre moment de la journée ou tout de suite après le traitement des mails.
-
-Afin de retrouver facilement toute les actions longues à traiter il est possible de créer un dossier de recherche personnalisé "Actions" (Dossier de recherche / Courrier avec un indicateur de suivi).
-
-Une fois les actions longues traitées, les marquer comme terminées ce qui ne les retirera de la vue Actions. Les mails ayant déjà été classés dans le bon répertoire lors de l'identification de l'action, aucune action supplémentaire n'est nécessaire.
-
-------------------------------------------------------------------------------------------------------------------------------------------
-
-## Gestion du calendrier
-
-Toujours dans l'optique d'offrir un support cognitif supplémentaire par la couleur facilitant la lecture, les options de classification peuvent être réutilisées pour les réunions. Les outils de messagerie comme Outlook permettent une classification automatique des rendez-vous d'agenda en fonction de l'organisateur.
-
-Exemple de classification des rendez-vous:
-
-* rouge, important (réunions de mes responsables)
-* vert, point d'équipe
-* violet, formation
-* orange, personnel (les marquer "privé" afin de masquer les détails)
-* bleu, les réunions que j'organise
-
-Afin de collaborer efficacement il faut :
-
-* impérativement répondre le plus tôt possible aux invitations de calendrier,
-* partager la visibilité des détails de notre agenda (les réunions d'ordre personnel étant marquées privées, les détails resteront inaccessible pour les autres).
-
-Ces règles faciliteront la planification pour les organisateurs de réunion.
+**Bonnes pratiques collaboratives :**
+* ⏱️ Répondre le plus rapidement possible aux invitations reçues.
+* 👁️ Partager la visibilité de son calendrier avec ses collègues (le statut privé masquant automatiquement les rendez-vous personnels, le reste facilite les créneaux partagés).
+* 🔒 N'hésitez pas à marquer comme privées les réunions confidentielles ou personnelles. 
